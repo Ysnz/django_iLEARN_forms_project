@@ -37,7 +37,6 @@ def category_list(request, category_slug):
     }
     return render(request, 'courses.html', context)
 
-
 def tag_list(request, tag_slug):  
 
     courses = Course.objects.filter(tags__slug=tag_slug)
