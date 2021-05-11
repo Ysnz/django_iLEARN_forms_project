@@ -42,9 +42,6 @@
 </head>
 <body class="host_version"> 
 
-	<!-- Modal -->
-
-
     <!-- LOADER -->
 	<div id="preloader">
 		<div class="loader-container">
@@ -55,40 +52,10 @@
 	</div>
 	<!-- END LOADER -->	
 	
-	<!-- Start header -->
+	<!-- NAVBAR -->
+    {% include 'partials/_navbar.html' %}
 
-	{% include 'partials/_navbar.html' %}
-	<!-- End header -->
-
-	{% block content %}
-    
+    {% block content %}
     {% endblock %}
 
-    
     {% include 'partials/_footer.html' %}
-
-    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-
-    <!-- ALL JS FILES -->
-    <script src="{% static 'js/all.js' %}"></script>
-    <!-- ALL PLUGINS -->
-    <script src="{% static 'js/custom.js' %}"></script>
-	<script src="{% static 'js/timeline.min.js' %}"></script>
-	<script>
-		timeline(document.querySelectorAll('.timeline'), {
-			forceVerticalMode: 700,
-			mode: 'horizontal',
-			verticalStartPosition: 'left',
-			visibleItems: 4
-		});
-	</script>
-
-	<script>
-
-		$(window).on('load', function(){
-			$('#logreg').modal('show');
-		})
-
-	</script>
-</body>
-</html>
